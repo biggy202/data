@@ -1,19 +1,18 @@
-import { log } from "console";
+// import { log } from "console";
 import express from "express";
-import dogs from "dogs";
-import cors from "cors"
-import mongoose from "mongoose";
+import dogs from "./dogs.js";
+import Cors from "cors";
+// import mongoose from "mongoose";
 const app = express();
 
-app.use()
+app.use(Cors({ origin: "*" }));
 
-const allData =[...dogs]
+const allData = [...dogs];
 
 app.get("/", (req, res) => {
-  res.send([])
-})
+  res.send(allData);
+});
 
-app.listen(4000, async () => 
-  console.log("server is running in port 4000")
-  
-);
+app.listen(4000, () => {
+  console.log("server is running in port 4000");
+});
