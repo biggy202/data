@@ -2,7 +2,7 @@
 import express from "express";
 import dogs from "./dogs.js";
 import Cors from "cors";
-// import mongoose from "mongoose";
+import mongoose from "mongoose";
 const app = express();
 
 app.use(Cors({ origin: "*" }));
