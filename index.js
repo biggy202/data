@@ -1,4 +1,3 @@
-// import { log } from "console";
 import express from "express";
 import dogs from "./dogs.js";
 import Cors from "cors";
